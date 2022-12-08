@@ -2,27 +2,29 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
-
 STATUS = ((0, "Save for later"), (1, "Published"))
 
 
-class Recipe(models.Model):
-    """Model for Recipe"""
-    title = models.CharField(max_length=50, unique=True)
-    slug = AutoSlugField(populate_from='title', unique=True)
+"""Model for Recipe"""
+
+
+class Post(models.Model):
+    title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="recipes")
-    created_on = models.DateTimeField(auto_now=True)
+        User, on_delete=models.CASCADE, related_name="recipes"
+    )
+    featured_image = CloudinaryField('image', default='placeholder')
+    excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
-    preparation_time = models.CharField(max_length=10, default=0)
-    cook_time = models.CharField(max_length=10, default=0)
+    content = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    preparation_time = models.CharField(max_length=50, default=0)
+    cook_time = models.CharField(max_length=50, default=0)
     description = models.TextField()
-    ingredients = models.TextField(validators=[textfield_not_empty])
-    method = models.TextField(validators=[textfield_not_empty])
-    image = CloudinaryField('image', default='placeholder')
-    status = models.IntegerField(choices=STATUS, default=1)
-    bookmarks = models.ManyToManyField(
-        User, related_name='bookmark', default=None, blank=True)
+    status = models.IntegerField(choices=STATUS, default=0)
+    likes = models.ManyToManyField(
+        User, related_name='blogpost_like', blank=True)
 
     class Meta:
         ordering = ["-created_on"]

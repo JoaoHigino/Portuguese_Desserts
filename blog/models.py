@@ -9,8 +9,10 @@ STATUS = ((0, "Save for later"), (1, "Published"))
 
 
 class Recipe(models.Model):
-    title = models.CharField(max_length=50, unique=True, null=False, blank=False)
-    slug = models.SlugField(max_length=200, unique=True, null=False, blank=False)
+    title = models.CharField(
+        max_length=50, unique=True, null=False, blank=False)
+    slug = models.SlugField(
+        max_length=200, unique=True, null=False, blank=False)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="recipes")
     created_on = models.DateTimeField(auto_now_add=True)

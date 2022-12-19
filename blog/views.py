@@ -1,6 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import Recipe
+from .forms import CommentForm
 
 
 class RecipeList(generic.ListView):
@@ -25,7 +27,8 @@ class RecipeDetail(View):
             {
                 "recipe": recipe,
                 "comments": comments,
-                "liked": liked
+                "liked": liked,
+                "comment_form": CommentForm()
             },
         )
 
@@ -36,3 +39,15 @@ class RecipeDetail(View):
         bookmarked = False
         if recipe.bookmarks.filter(id=self.request.user.id).exists():
             bookmarked = True
+
+
+class RecipeLike(View):
+
+    def post(self, request, slug, *args, **kwargs):
+        post = get_object_or_404(Post, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('details', args=[slug]))

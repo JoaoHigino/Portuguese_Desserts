@@ -31,26 +31,36 @@
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav navbar-nav flex-row ml-md-auto d-md-flex">
+                    <li class="nav-item active">
+                        <a class="nav-link p-2{% block active_home %}{% endblock %}" {% block aria_home %}{% endblock %}
+                            href="{% url 'home' %}">Home</a>
+                    </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link p-2{% block active_about %}{% endblock %}"
+                            {% block aria_about %}{% endblock %} href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2{% block active_create %} {% endblock %}"
+                            {% block aria_create %}{% endblock %} href="{% url 'add_recipe' %}">Add Recipe</a>
                     </li>
                     {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                    <li class="nav-item active">
+                        <a class="nav-link p-2{% block active_logout %} {% endblock %}"
+                            {% block aria_logout %}{% endblock %} href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                        <a class="nav-link p-2{% block active_signup %} {% endblock %}"
+                            {% block aria_signup %}{% endblock %} href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link p-2{% block active_login %} {% endblock %}"
+                            {% block aria_login %}{% endblock %} href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
-
                 </ul>
-                
             </div>
         </div>
     </nav>
@@ -76,7 +86,7 @@
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-white">Made by Code Instituters</p>
+        <p class="m-0 text-center text-white">Made by Joao Higino</p>
         <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
             <i class="fab fa-twitter-square ms-3"></i>
             <i class="fab fa-instagram-square ms-3"></i>

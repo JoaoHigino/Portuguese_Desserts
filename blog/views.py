@@ -51,3 +51,27 @@ class RecipeLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('details', args=[slug]))
+
+
+def about(request):
+    return render(request, "about.html")
+
+
+def create_recipe(request):
+    recipe_form = RecipeForm(request.POST or None, request.FILES or None)
+    context = {
+        'recipe_form': recipe_form,
+    }
+
+    if request.method == "POST":
+        recipe_form = RecipeForm(request.POST, request.FILES)
+        print("hello555")
+        if recipe_form.is_valid():
+            recipe_form = recipe_form.save(commit=False)
+            recipe_form.author = request.user
+            recipe_form.status = 1
+            recipe_form.save()
+            return redirect('home')
+    else:
+        recipe_form = RecipeForm()
+    return render(request, "create_recipe.html", context)

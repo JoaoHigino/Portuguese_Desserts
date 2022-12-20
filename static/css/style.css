@@ -2,7 +2,7 @@ body {
     background-color: #5fd3e2;
 }
 
-.title {
+.brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
@@ -111,7 +111,7 @@ body {
 }
 
 .link {
-    color: #23BBBB;
+    color: #080808;
     text-decoration: none;
 }
 
@@ -144,7 +144,7 @@ a {
 
 a:hover {
     text-decoration: underline;
-    color: #0dcaf0 !important;
+    color: #111111 !important;
 }
 
 a.nav-link {
@@ -152,9 +152,13 @@ a.nav-link {
 }
 
 a.nav-link:hover {
-    color: #0dcaf0 !important;
+    color: #080808 !important;
 }
 
 a.nav-link-active {
     color: #245E6B !important;
+}
+
+.navbar{
+    align-items: center;
 }

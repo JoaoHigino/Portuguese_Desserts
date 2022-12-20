@@ -41,10 +41,6 @@
                         <a class="nav-link p-2{% block active_about %}{% endblock %}"
                             {% block aria_about %}{% endblock %} href="{% url 'about' %}">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link p-2{% block active_create %} {% endblock %}"
-                            {% block aria_create %}{% endblock %} href="{% url 'add_recipe' %}">Add Recipe</a>
-                    </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item active">
                         <a class="nav-link p-2{% block active_logout %} {% endblock %}"
@@ -86,11 +82,16 @@
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-white">Made by Joao Higino</p>
-        <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i></p>
+        <p class="m-0 text-center text-white">&copy; Made by Joao Higino</p>
+        <p class="m-0 text-center text-white">Follow us:
+            <a href="https://www.facebook.com/" class="social" target="_blank" rel="noopener"
+                aria-label="link to facebook (opens in a new tab)"><i class="fab fa-facebook-f ms-3"></i></a>
+            <a href="https://www.twitter.com/" class="social" target="_blank" rel="noopener"
+                aria-label="link to twitter (opens in a new tab)"><i class="fab fa-twitter ms-3"></i></a>
+            <a href="https://www.instagram.com/" class="social" target="_blank" rel="noopener"
+                aria-label="link to instagram (opens in a new tab)"><i class="fab fa-instagram ms-3"></i></a>
+            <a href="https://www.youtube.com/" class="social" target="_blank" rel="noopener"
+                aria-label="link to youtube (opens in a new tab)"><i class="fab fa-youtube ms-3"></i></a>
     </footer>
     <script>
         setTimeout(function () {

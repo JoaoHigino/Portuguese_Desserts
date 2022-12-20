@@ -1,0 +1,37 @@
+<!-- Pagination Code taken from Django Docs with custom styling -->
+
+{%  if is_paginated  %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="pagination justify-content-center my-4">
+                <span class="step-links">
+                    {% if page_obj.has_previous %}
+                    <a class="btn btn-outline-dark btn-sm mb4 ml-1" href="?page=1">First</a>
+                    <a class="btn btn-outline-dark btn-sm mb4 ml-1" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                    {% endif %}
+                    <span class="current text-dark">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                    </span>
+                    {% if page_obj.has_next %}
+                    <a class="btn btn-outline-dark btn-sm mb4 ml-1" href="?page={{ page_obj.next_page_number }}">Next</a>
+                    <a class="btn btn-outline-dark btn-sm mb4 ml-1" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+                    {% endif %}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+{%  endif  %}
+<footer class="footer mt-auto py-3 dark-bg">
+    <p class="m-0 text-center text-white">&copy; Made by Joao Higino</p>
+    <p class="m-0 text-center text-white">Follow us:
+        <a href="https://www.facebook.com/" class="social" target="_blank" rel="noopener"
+            aria-label="link to facebook (opens in a new tab)"><i class="fab fa-facebook-f ms-3"></i></a>
+        <a href="https://www.twitter.com/" class="social" target="_blank" rel="noopener"
+            aria-label="link to twitter (opens in a new tab)"><i class="fab fa-twitter ms-3"></i></a>
+        <a href="https://www.instagram.com/" class="social" target="_blank" rel="noopener"
+            aria-label="link to instagram (opens in a new tab)"><i class="fab fa-instagram ms-3"></i></a>
+        <a href="https://www.youtube.com/" class="social" target="_blank" rel="noopener"
+            aria-label="link to youtube (opens in a new tab)"><i class="fab fa-youtube ms-3"></i></a>
+</footer>

@@ -133,3 +133,28 @@ body {
     background: transparent;
     border: none;
 }
+
+.footer.social:hover {
+    color: #E84610;
+}
+a {
+    text-decoration: none;
+    color:#ffffff;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0dcaf0 !important;
+}
+
+a.nav-link {
+    color: #0E070C !important;
+}
+
+a.nav-link:hover {
+    color: #0dcaf0 !important;
+}
+
+a.nav-link-active {
+    color: #245E6B !important;
+}

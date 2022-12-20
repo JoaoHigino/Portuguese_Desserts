@@ -75,3 +75,4 @@ def create_recipe(request):
     else:
         recipe_form = RecipeForm()
     return render(request, "create_recipe.html", context)
+

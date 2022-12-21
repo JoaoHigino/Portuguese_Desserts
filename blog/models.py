@@ -5,16 +5,17 @@ from cloudinary.models import CloudinaryField
 STATUS = ((0, "Save for later"), (1, "Published"))
 
 
-"""Model for Recipe"""
+"""Model for Post"""
 
 
-class Recipe(models.Model):
+class Post(models.Model):
     title = models.CharField(
         max_length=50, unique=True, null=False, blank=False)
     slug = models.SlugField(
         max_length=200, unique=True, null=False, blank=False)
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="recipes")
+        User, on_delete=models.CASCADE, related_name="blog_posts"
+    )
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     preparation_time = models.IntegerField(null=False, blank=False)
@@ -25,7 +26,9 @@ class Recipe(models.Model):
     status = models.IntegerField(choices=STATUS, default=1)
     bookmarks = models.ManyToManyField(
         User, related_name='bookmark', default=None, blank=True)
-
+    likes = models.ManyToManyField(
+        User, related_name='blogpost_like', blank=True)
+    
     class Meta:
         ordering = ["-created_on"]
 
@@ -38,7 +41,7 @@ class Recipe(models.Model):
 
 class Comment(models.Model):
     recipe = models.ForeignKey(
-        Recipe, on_delete=models.CASCADE, related_name='comments')
+        Post, on_delete=models.CASCADE, related_name='comments')
     user = models.ForeignKey(
         User, on_delete=models.CASCADE)
     body = models.TextField(null=False, blank=False)

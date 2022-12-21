@@ -1,47 +1,72 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Recipe
+from .models import Post
 from .forms import CommentForm
 
 
-class RecipeList(generic.ListView):
-    model = Recipe
-    queryset = Recipe.objects.filter(status=1).order_by('-created_on')
+class PostList(generic.ListView):
+    model = Post
+    queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "index.html"
     paginate_by = 6
 
 
-class RecipeDetail(View):
-    def get(self, request, slug):
-        queryset = Recipe.objects.all()
-        recipe = get_object_or_404(queryset, slug=slug)
-        comments = recipe.comments.order_by('created_on')
-        bookmarked = False
-        if recipe.bookmarks.filter(id=self.request.user.id).exists():
-            bookmarked = True
+class PostDetail(View):
+
+    def get(self, request, slug, *args, **kwargs):
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        comments = post.comments.filter(approved=True).order_by("-created_on")
+        liked = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
 
         return render(
             request,
-            "details.html",
+            "post_detail.html",
             {
-                "recipe": recipe,
+                "post": post,
                 "comments": comments,
+                "commented": False,
                 "liked": liked,
                 "comment_form": CommentForm()
             },
         )
 
-    def post(self, request, slug):
-        queryset = Recipe.objects.filter(status=1)
-        recipe = get_object_or_404(queryset, slug=slug)
-        comments = recipe.comments.order_by('created_on')
-        bookmarked = False
-        if recipe.bookmarks.filter(id=self.request.user.id).exists():
-            bookmarked = True
+    def post(self, request, slug, *args, **kwargs):
+
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        comments = post.comments.filter(approved=True).order_by("-created_on")
+        liked = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment_form.instance.email = request.user.email
+            comment_form.instance.name = request.user.username
+            comment = comment_form.save(commit=False)
+            comment.post = post
+            comment.save()
+        else:
+            comment_form = CommentForm()
+
+        return render(
+            request,
+            "post_detail.html",
+            {
+                "post": post,
+                "comments": comments,
+                "commented": True,
+                "comment_form": comment_form,
+                "liked": liked
+            },
+        )
 
 
-class RecipeLike(View):
+class PostLike(View):
 
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
@@ -50,45 +75,4 @@ class RecipeLike(View):
         else:
             post.likes.add(request.user)
 
-        return HttpResponseRedirect(reverse('details', args=[slug]))
-
-
-def about(request):
-    return render(request, "about.html")
-
-
-def create_recipe(request):
-    recipe_form = RecipeForm(request.POST or None, request.FILES or None)
-    context = {
-        'recipe_form': recipe_form,
-    }
-
-    if request.method == "POST":
-        recipe_form = RecipeForm(request.POST, request.FILES)
-        print("hello555")
-        if recipe_form.is_valid():
-            recipe_form = recipe_form.save(commit=False)
-            recipe_form.author = request.user
-            recipe_form.status = 1
-            recipe_form.save()
-            return redirect('home')
-    else:
-        recipe_form = RecipeForm()
-    return render(request, "create_recipe.html", context)
-
-
-def search_articles(request):
-    if request.method == 'POST':
-        searched = request.POST['searched']
-        if not searched:
-            return redirect("/")
-        post_list = Post.objects.filter(
-            Q(content__icontains=searched) |
-            Q(title__icontains=searched) |
-            Q(author__username__icontains=searched)).filter(status=1)
-
-        return render(
-            request, 'index.html',
-            {'searched': searched, 'post_list': post_list})
-    else:
-        return render(request, 'index.html', {})
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))

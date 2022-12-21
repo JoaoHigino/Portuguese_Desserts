@@ -1,10 +1,10 @@
 from django.contrib import admin
-from .models import Recipe, Comment
+from .models import Post, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
 
-@admin.register(Recipe)
-class RecipeAdmin(SummernoteModelAdmin):
+@admin.register(Post)
+class PostAdmin(SummernoteModelAdmin):
     list_filter = ('status', 'created_on')
     list_display = ('title', 'slug', 'status', 'created_on')
     search_fields = ('title', 'description')
@@ -13,7 +13,7 @@ class RecipeAdmin(SummernoteModelAdmin):
 
 
 @admin.register(Comment)
-class CommentAdmin(admin.ModelAdmin):
+class PostAdmin(admin.ModelAdmin):
     list_display = ('user', 'body', 'recipe', 'created_on')
     list_filter = ('created_on',)
     search_fields = ('user', 'body')

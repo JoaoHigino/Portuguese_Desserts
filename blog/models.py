@@ -28,7 +28,7 @@ class Post(models.Model):
         User, related_name='bookmark', default=None, blank=True)
     likes = models.ManyToManyField(
         User, related_name='blogpost_like', blank=True)
-    
+
     class Meta:
         ordering = ["-created_on"]
 

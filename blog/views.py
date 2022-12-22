@@ -65,17 +65,16 @@ class PostDetail(View):
             },
         )
 
-<<<<<<< HEAD
-=======
-    def post(self, request, slug):
-        queryset = Recipe.objects.filter(status=1)
-        recipe = get_object_or_404(queryset, slug=slug)
-        comments = recipe.comments.order_by('created_on')
-        bookmarked = False
-        if recipe.bookmarks.filter(id=self.request.user.id).exists():
-            bookmarked = True
 
->>>>>>> origin
+def post(self, request, slug):
+
+    queryset = Recipe.objects.filter(status=1)
+    recipe = get_object_or_404(queryset, slug=slug)
+    comments = recipe.comments.order_by('created_on')
+    bookmarked = False
+    if recipe.bookmarks.filter(id=self.request.user.id).exists():
+        bookmarked = True
+
 
 class PostLike(View):
 
@@ -86,8 +85,4 @@ class PostLike(View):
         else:
             post.likes.add(request.user)
 
-<<<<<<< HEAD
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-=======
-        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
->>>>>>> origin

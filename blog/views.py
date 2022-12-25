@@ -3,6 +3,8 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
+from django.shortcuts import render
+from django.contrib.auth.forms import UserCreationForm
 
 
 class PostList(generic.ListView):

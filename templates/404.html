@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!--500 error page-->
+<div class="container about-page">
+
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <p>
+                <br>
+                <h3>404 - Page not found :(
+                    <br>
+                    <br>
+                    <strong>Something went wrong.
+                        Please click on the link below to go back to the homepage</strong>
+                    <br>
+                    <br> <a class="navbar-brand" href="{% url 'home' %}"><img class="logo-image"></h3>
+                <br>
+            </p>
+        </div>
+    </div>
+
+</div>
+{%endblock%}

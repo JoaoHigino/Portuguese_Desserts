@@ -1,6 +1,7 @@
 from . import views
 from django.urls import path, reverse
 from django.views.generic import TemplateView
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
 urlpatterns = [
@@ -17,3 +18,5 @@ urlpatterns = [
         views.UpdatePost.as_view(), name='post_update'
         ),
 ]
+
+urlpatterns += staticfiles_urlpatterns()

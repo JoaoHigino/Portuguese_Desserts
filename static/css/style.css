@@ -53,8 +53,8 @@
 }
 
 .masthead-text {
-    background-color: #445261;
-    color: #880404;
+    background-color: #df6e94;
+    color: white;
     position: relative;
 }
 
@@ -70,7 +70,7 @@
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background: transparent;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -98,7 +98,7 @@
 }
 
 .btn-signup {
-    background-color: #d620af;
+    background-color: #75090f;
     color: #fff;
 }
 
@@ -167,10 +167,7 @@ a.nav-link-active {
 }
 
 @media (max-width: 700px) {
-    .search_articles {
-        width: 200px !important;
-    }
-
+    
     textarea {
         width: 75%;
     }

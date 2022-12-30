@@ -15,8 +15,10 @@ urlpatterns = [
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
     path(
         'post/<slug:slug>/update/',
-        views.UpdatePost.as_view(), name='post_update'
-        ),
+        views.UpdatePost.as_view(), name='post_update'),
+    path(
+        'post/<slug:slug>/delete/',
+        views.DeletePost.as_view(), name='post_delete')
 ]
 
 urlpatterns += staticfiles_urlpatterns()

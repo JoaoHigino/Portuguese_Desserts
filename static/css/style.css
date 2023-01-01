@@ -1,10 +1,14 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+/* Global Styles */
 .logo-image {
     height: 130px;
     margin: 5px;
 
 }
 
-.container-fluid{
+.container-fluid {
     background-color: #f9eae8;
 }
 
@@ -115,7 +119,7 @@
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: #df6e94;
     text-decoration: underline;
 }
 
@@ -132,16 +136,22 @@
     border: none;
 }
 
-.btn-outline-info{
-    color: #f9eae8 ;
+.btn-outline-info {
+    color: #880404;
+    border: #070707;
+}
+
+.btn-outline-info:hover {
+    color: #df6e94;
 }
 
 .footer.social:hover {
     color: #E84610;
 }
+
 a {
     text-decoration: none;
-    color:#880404;
+    color: #880404;
 }
 
 a:hover {
@@ -158,16 +168,19 @@ a.nav-link:hover {
 }
 
 a.nav-link-active {
-    color: #e95014!important;
+    color: #e95014 !important;
 }
 
-.navbar{
+.navbar {
     align-items: center;
     padding: 0;
 }
 
 @media (max-width: 700px) {
-    
+    .search_articles {
+        width: 200px !important;
+    }
+
     textarea {
         width: 75%;
     }

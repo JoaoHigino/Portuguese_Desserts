@@ -1,82 +1,51 @@
 # PORTUGUESE DESSERTS
 
-In this section, you will include a few paragraphs providing an overview of your project.
-Essentially, this part is your "sales pitch".
+Portuguese Desserts is a blog for the people who missed the best desserts in the world and missed Portugal. In this blog you can learn how to do your favorite desserts.
 
 At this stage, you should have a name for your project so use it!
 Don't introduce the project as a "portfolio project" for the diploma.
 
-In this section, describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience.
+Users have the ability to read, comment and like post via their own profile.
 
 Consider adding a mockup image using the "Am I Responsive" website.
 Here's your deployed site as an example:
-https://ui.dev/amiresponsive?url=https://portuguese-desserts.herokuapp.com
+<!-- INSERIR IMAGEM -->
 
-Screenshots for the README and testing should not be inside of `assets/` or `static/` image folders.
-(reminder: `assets/` and `static/` are for files used on the live site, not documentation)
-Consider adding a new folder called `documentation`, and add the amiresponsive screenshot inside of that folder.
-To add the image into your README, use this format:
-(assuming you have a new folder called `documentation` with an image called "mockup.png")
 
-![screenshot](documentation/mockup.png)
+![screenshot](documentation/png)
 
-Note: Markdown files (.md) should not contain HTML elements like `img`, `br`, `div`, `a`, etc, only Markdown formatting.
-Find out more about using Markdown elements here:
-https://pandao.github.io/editor.md/en.html
 
 ## UX
+### As the site creator/admin:
+* I want to have full access and functionality as a superuser.
+* I want to be able to create, read, edit and delete all posts.
+* I want to be able to view / reject pending posts from users before publication.
 
-In this section, you will briefly explain your design processes.
+### As the site user:
+* I want to be able to register an account.
+* I want to be able to leave comments on all posts.
+* I want to be able to Like and unlike posts.
+* I want to be able to view all other posts by using the search functionality.
+
 
 ### Colour Scheme
 
 Explain your colours and the colour scheme.
 
-- `#000000` used as the primary text.
-- `#E84610` used as the primary highlights.
-- `#4A4A4F` used as the secondary text.
-- `#009FE3` used as the secondary highlights.
-
-Consider adding a link and screenshot for your colour scheme using "coolors".
-https://coolors.co/generate
-
-When you add a colour to the palette, the URL is dynamically updated, making it easier for you to return back to your colour palette later if needed.
-
-Example:
+- `#445261` used as the primary text.
+- `#f30c0c` used as the primary highlights.
+- `#070707` used as the secondary text.
+- `#6c757d` used as the secondary highlights.
 
 I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
 
-![screenshot](documentation/coolors.png)
+![screenshot](documentation/colorpalette.png)
 
-If you've used CSS `:root` variables, consider also including a code snippet here!
-
-I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
-
-```css
-:root {
-    /* P = Primary | S = Secondary */
-    --p-text: #000000;
-    --p-highlight: #E84610;
-    --s-text: #4A4A4F;
-    --s-highlight: #009FE3;
-    --white: #FFFFFF;
-    --black: #000000;
-}
-```
 
 ### Typography
 
-Explain any fonts and icon libraries used, like Google Fonts and/or Font Awesome.
+The Robot Mono font is the main font used for the body of the website with the Playfair Display font used for the main headings on the home page. These fonts were imported via Google Fonts.
 
-Consider adding a link to each font used, and the Font Awesome site if used (or similar icon library).
-
-Example:
-
-- [Montserrat](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
-
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
-
-- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
 
 ## User Stories
 

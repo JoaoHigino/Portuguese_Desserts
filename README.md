@@ -126,27 +126,48 @@ IMPORTANT: Remember to always include a screenshot of each individual feature!
 
 ### Existing Features
 
-- **Feature #1**
+### Home Page
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+Homepage displays the logo name, About Us, Sign Up and Login are the options on the left and search function on the right.
+The main body of the homepage contains 6 articles / posts and once more than 6 articles are posted pagination shows links to the next page.
+Social media network links are displayed in the footer.
 
-![screenshot](documentation/feature01.png)
+### Logo
 
-- **Feature #2**
+- A customised logo was created using freelogodesign which is a free logo generator.
+- This logo is positioned in the top left of the navigation bar. The logo is linked to the home page for ease of navigation for the user.
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+![screenshot](documentation/logo_pd.png)
 
-![screenshot](documentation/feature02.png)
+### Navigation Bar
 
-- **Feature #3**
+- The navigation bar is present at the top of every page and includes all links to the various other pages.
+- The My Account navigation link is a drop down menu which includes the Sign up and Log in links. 
+- When the user has logged in, the My Account drop down menu changes to display the user's name and a profile icon.
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+![header](documentation/navbar.png)
 
-![screenshot](documentation/feature03.png)
+### Search Bar
 
-Repeat as necessary for as many features as your site contains.
+![header](documentation/search.png)
 
-Hint: the more, the merrier!
+
+### Create an account 
+
+![header](documentation/signup.png)
+
+### Login 
+
+![header](documentation/signin.png)
+
+### Logout
+
+![header](documentation/signout.png)
+
+### Footer
+
+![screenshot](documentation/footer.png)
+
 
 ### Future Features
 
@@ -278,6 +299,10 @@ Using Markdown formatting to represent an example ERD table using the Product mo
     | | image | ImageField | |
 
 ## Agile Development Process
+
+Github projects was used to manage the development process using an agile approach. Please see link to project board [here](https://github.com/users/JoaoHigino/projects/7)
+
+The INSERIR Epics listed above were documented within the Github project as Milestones. A Github Issue was created for each User Story which was then allocated to a milestone(Epic). Each User Story has defined acceptance criteria to make it clear when the User Story has been completed. The acceptance criteria are further broken down into tasks to facilitate the User Story's execution.
 
 ### GitHub Projects
 

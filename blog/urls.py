@@ -1,7 +1,6 @@
 from . import views
 from django.urls import path, reverse
 from django.views.generic import TemplateView
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
 urlpatterns = [
@@ -20,5 +19,3 @@ urlpatterns = [
         'post/<slug:slug>/delete/',
         views.DeletePost.as_view(), name='post_delete')
 ]
-
-urlpatterns += staticfiles_urlpatterns()

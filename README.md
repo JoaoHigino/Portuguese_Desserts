@@ -2,30 +2,15 @@
 
 Portuguese Desserts is a blog for the people who missed the best desserts in the world and missed Portugal. In this blog you can learn how to do your favorite desserts.
 
-At this stage, you should have a name for your project so use it!
-Don't introduce the project as a "portfolio project" for the diploma.
-
-Users have the ability to read, comment and like post via their own profile.
-
-Consider adding a mockup image using the "Am I Responsive" website.
-Here's your deployed site as an example:
-<!-- INSERIR IMAGEM -->
-
+<!-- INSERIR IMAGEM "Am I Responsive"-->
 
 ![screenshot](documentation/png)
 
+The live link can be found here - [Portuguese Desserts](https://portuguese-desserts.herokuapp.com/)
 
 ## UX
-### As the site creator/admin:
-* I want to have full access and functionality as a superuser.
-* I want to be able to create, read, edit and delete all posts.
-* I want to be able to view / reject pending posts from users before publication.
 
-### As the site user:
-* I want to be able to register an account.
-* I want to be able to leave comments on all posts.
-* I want to be able to Like and unlike posts.
-* I want to be able to view all other posts by using the search functionality.
+A visitor to Portuguese Desserts would be someone who is most likely an adult who missed their traditional desserts and trying new recipes but also wants to save time and effort when deciding what to cook for a special occasion.
 
 
 ### Colour Scheme
@@ -53,27 +38,22 @@ In this section, list all of your user stories for the project.
 
 ### New Site Users
 
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
+- As a New Site User I can log into my own account so that I can manage Username and Password information.
 
 ### Returning Site Users
 
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
+- As a Site User I can view a paginated list of posts so that easily select a post to view.
+- As a Site User I can edit my comments so that I can change my opinion.
+- As a Site User I can delete my comments so that no one can read my comments again.
+- As a Site User I can view a paginated list of recipes so that I can select a recipe to view.
+- As a Site User I can view comments on an individual post so that I can read the conversation.
+- As a site user I can search for a recipe so that I can minimize time searching for what I need.
 
 ### Site Admin
 
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
+- As a Site administrator I can add, filter, change and search for recipes so that I can easily manage my site content.
+- As a Site administrator I can view the number of likes on each post so that I can see which is the most popular or viral.
+- As a Site administrator I can create, read, update and delete posts so that I can manage my blog content.
 
 ## Wireframes
 
@@ -112,17 +92,6 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | x | x | repeat for all remaining desktop wireframes |
 
 ## Features
-
-In this section, you should go over the different parts of your project,
-and describe each in a sentence or so.
-
-You will need to explain what value each of the features provides for the user,
-focusing on who this website is for, what it is that they want to achieve,
-and how your project is the best way to help them achieve these things.
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-IMPORTANT: Remember to always include a screenshot of each individual feature!
 
 ### Existing Features
 
@@ -168,20 +137,44 @@ Social media network links are displayed in the footer.
 
 ![screenshot](documentation/footer.png)
 
+### About Us
+
+![screenshot](documentation/aboutus.png)
+
+### Add Post - Admin Only
+![screenshot](documentation/addpost.png)
+
+### Update/Delete Post - Admin Only
+![screenshot](documentation/update.png)
+
+### 500 Page Error
+A 500 server error page was created to handle internal server errors.
+
+![Error](documentation/error500.png)
+
+
 
 ### Future Features
 
-Do you have additional ideas that you'd like to include on your project in the future?
-Fantastic! List them here!
-It's always great to have plans for future improvements!
-Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
+- Site Users be able to add recipes.
+- Allows users to signup to a newsletter / mailing list.
+- Contact Form.
 
-- Cool new feature #1
-    - Any additional notes about this feature.
-- Cool new feature #2
-    - Any additional notes about this feature.
-- Cool new feature #3
-    - Any additional notes about this feature.
+## Bugs / Errors encountered during development
+
+* Manage.py was not in the root directory. [Click here](documentation/error3.png)
+* App wasn’t deploying to heroku correctly. Updated Procfile from "heard-it" to "heardit"
+* Update your requirements.txt - pip3 freeze > requirements.txt and try again. I had a typo in requirements without .txt. [Click here](https://github.com/sherryrich/heard-it/blob/main/docs/error_2.png)
+* Template literal typo error "$" instead of "%". [Click here](https://github.com/sherryrich/heard-it/blob/main/docs/error_3.png)
+* Error in views.py. '-created' versus '-created_on'. [Click here](https://github.com/sherryrich/heard-it/blob/main/docs/error_4.png)
+* Missing comma at the end of this line "STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]". [Click here](https://github.com/sherryrich/heard-it/blob/main/docs/error_5.png)
+* 500 Error because I didn’t have "redirect" imported at top of views.py file. [Click here](https://github.com/sherryrich/heard-it/blob/main/docs/error_6.png)
+* Error in the terminal. Heroku updated database so had go to Heroku config vars and copy and paste the new database_url into the env.py to correct. [Click here](https://github.com/sherryrich/heard-it/blob/main/docs/error_7.png)
+* Space in the token provided. Caused CSS not to display on the front end as expected. [Click here](https://github.com/sherryrich/heard-it/blob/main/docs/error_8.png)
+* Missing closing span. Caused HTML to fail validator rules. [Click here](https://github.com/sherryrich/heard-it/blob/main/docs/error_9.png)
+* Search Button was missing on smaller devices so I added a media query and reduced the size of the element on smaller devices. Please see screen shots [Before](https://github.com/sherryrich/heard-it/blob/main/docs/search_box_before.PNG) and [After](https://github.com/sherryrich/heard-it/blob/main/docs/search_box_after.PNG). 
+* I was aware of various pylint and flak8 notifications however none of them are having any functionality implications and were as a result of the template followed from the code institute Django blog project Walkthrough.
+
 
 ## Tools & Technologies Used
 
@@ -195,7 +188,6 @@ Feel free to delete any unused items below as necessary.
 - [CSS :root variables](https://www.w3schools.com/css/css3_variables.asp) used for reusable styles throughout the site.
 - [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) and/or [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
 - [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
-- [Materialize](https://materializecss.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
 - [JavaScript](https://www.javascript.com) used for user interaction on the site.
 - [Python](https://www.python.org) used as the back-end programming language.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
@@ -203,53 +195,15 @@ Feel free to delete any unused items below as necessary.
 - [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
 - [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
 - [Tim Nelson](https://traveltimn.github.io/readme-builder) used to help generate the Markdown files.
-- [Flask](https://flask.palletsprojects.com) used as the Python framework for the site.
 - [Django](https://www.djangoproject.com) used as the Python framework for the site.
-- [MongoDB](https://www.mongodb.com) used as the non-relational database management with Flask.
-- [SQLAlchemy](https://www.sqlalchemy.org) used as the relational database management with Flask.
 - [PostgreSQL](https://www.postgresql.org) used as the relational database management.
 - [ElephantSQL](https://www.elephantsql.com) used as the Postgres database.
 - [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
 - [Cloudinary](https://cloudinary.com) used for online static file storage.
-- [Stripe](https://stripe.com) used for online secure payments of ecommerce products/services.
-- [AWS S3](https://aws.amazon.com/s3) used for online static file storage.
+- [Summernote](https://summernote.org/) Used to add a text area field to the admin setup to enable a list of ingredients and method steps.
+- [Grammarly](https://app.grammarly.com/) - used to proof read the README.md
 
 ## Database Design
-
-**Flask** Projects:
-- If using MongoDB, then use the following steps.
-- If using SQLAlchemy, then follow a similar approach using an ERD below in the Django section.
-
-My project uses a non-relation database with MongoDB, and therefore the database architecture
-doesn't have actual relationship like a Postgres database would.
-
-My database is called **task_manager**.
-
-It contains 3 collections:
-
-- **categories**
-    | Key | Type | Notes |
-    | --- | --- | --- |
-    | _id | ObjectId() | |
-    | category_name | String | |
-
-- **tasks**
-    | Key | Type | Notes |
-    | --- | --- | --- |
-    | _id | ObjectId() | |
-    | category_name | String | selected from *categories* collection |
-    | task_name | String | |
-    | task_description | String | |
-    | is_urgent | String | |
-    | due_date | String | |
-    | created_by | String | selected from the *users* collection |
-
-- **users**
-    | Key | Type | Notes |
-    | --- | --- | --- |
-    | _id | ObjectId() | |
-    | username | String | |
-    | password | String | uses Secure Hash Algorithm (SHA) |
 
 **Django** Projects:
 
@@ -275,12 +229,7 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 ```
-
-A couple recommendations for building free ERDs:
-- [Draw.io](https://draw.io)
-- [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)
-
-![screenshot](documentation/erd.png)
+![screenshot](documentation/diagramps.png)
 
 Using Markdown formatting to represent an example ERD table using the Product model above:
 

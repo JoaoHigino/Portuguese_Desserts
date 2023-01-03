@@ -7,9 +7,9 @@ from django_summernote.admin import SummernoteModelAdmin
 class PostAdmin(SummernoteModelAdmin):
     list_filter = ('status', 'created_on')
     list_display = ('title', 'slug', 'status', 'created_on')
-    search_fields = ('title', 'description')
+    search_fields = ('title', 'description', 'ingredients')
     prepopulated_fields = {'slug': ('title',)}
-    summernote_fields = ('description',)
+    summernote_fields = ('description', 'ingredients', )
 
 
 @admin.register(Comment)

@@ -7,7 +7,7 @@
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <h1 class="post-title">{{ post.title }}</h1>
-                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+                <p class="post-subtitle">{{ post.author }}|{{ post.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 post-image">
                 {% if "placeholder" in post.image.url %}
@@ -25,45 +25,52 @@
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
-                <p class="card-text "></p>
-                {{ post.content | safe }}
-                <div class="row">
-                    <p>
-                        {% if user.username == post.author.username %}
-                        <p>
-                            <a href="{% url 'post_update' post.slug %}" class="btn btn-primary btn-sm col-6"> Update
-                            </a>
-                            <p>
-                                <a href="{% url 'post_delete' post.slug %}" class="btn btn-danger btn-sm col-6"> Delete
-                                </a>
-                                <br>
-                                {% endif %}
+                <div class="card-text ">Prepation time: {{ post.preparation_time}} min</div>
+                <div class="card-text ">Cook time: {{ post.cook_time}} min</div>
+                <hr>
+                <div class="card-text ">Ingredients: <br> {{ post.ingredients|safe }}</div>
+                <hr>
+                <div class="card-text ">{{ post.description|safe }}</div>
 
-                                <div class="col-1">
-                                    <strong>
-                                        {% if user.is_authenticated %}
-                                        <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-                                            {% csrf_token %}
-                                            {% if liked %}
-                                            <button type="submit" name="blogpost_id" value="{{post.slug}}"
-                                                class="btn-like"><i class="fas fa-heart"></i></button>
-                                            {% else %}
-                                            <button type="submit" name="blogpost_id" value="{{post.slug}}"
-                                                class="btn-like"><i class="far fa-heart"></i></button>
-                                            {% endif %}
-                                        </form>
-                                        {% else %}
-                                        <span class="text-secondary"><i class="far fa-heart"></i></span>
-                                        {% endif %}
-                                        <span class="text-secondary">{{ post.number_of_likes }} </span>
-                                    </strong>
-                                </div>
-                                <div class="col-1">
-                                    {% with comments.count as total_comments %}
-                                    <strong class="text-secondary"><i class="far fa-comments"></i>
-                                        {{ total_comments }}</strong>
-                                    {% endwith %}
-                                </div>
+                <div class="row">
+
+                    {% if user.is_superuser %}
+
+                        <a href="{% url 'post_update' post.slug %}" class="btn btn-primary btn-sm col-6"> Update
+                        </a>
+
+                        <a href="{% url 'post_delete' post.slug %}" class="btn btn-danger btn-sm col-6"> Delete
+                        </a>
+                        <br>
+                    {% endif %}
+
+                    <div class="col-1">
+                        <strong>
+                            {% if user.is_authenticated %}
+                                <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                                    {% csrf_token %}
+                                    {% if liked %}
+                                        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like">
+                                            <i class="fas fa-heart"></i></button>
+                                    {% else %}
+                                        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like">
+                                            <i class="far fa-heart"></i></button>
+                                    {% endif %}
+                                </form>
+                            {% else %}
+                                <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            {% endif %}
+                            <span class="text-secondary">{{ post.number_of_likes }} </span>
+                        </strong>
+                    </div>
+                    <div class="col-1">
+                        {% with comments.count as total_comments %}
+                            <strong class="text-secondary">
+                                <i class="far fa-comments"></i>
+                                {{ total_comments }}
+                            </strong>
+                        {% endwith %}
+                    </div>
                 </div>
             </div>
         </div>
@@ -78,36 +85,37 @@
             <h3>Comments:</h3>
             <div class="card-body">
                 {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
-                        {{ comment.name }}
-                        <span class=" text-muted font-weight-normal">
-                            {{ comment.created_on }}
-                        </span> wrote:
-                    </p>
-                    {{ comment.body | linebreaks }}
-                </div>
+                    <div class="comments" style="padding: 10px;">
+                        <p class="font-weight-bold">
+                            {{ comment.user.username }}
+                            wrote on:
+                            <span class=" text-muted font-weight-normal">
+                                {{ comment.created_on }}
+                            </span> 
+                        </p>
+                        {{ comment.body|linebreaks }}
+                    </div>
                 {% endfor %}
             </div>
         </div>
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
                 {% if commented %}
-                <div class="alert alert-success" role="alert">
-                    Your comment is awaiting approval
-                </div>
+                    <div class="alert alert-success" role="alert">
+                        You already commented on this recipe.
+                    </div>
                 {% else %}
 
-                {% if user.is_authenticated %}
+                    {% if user.is_authenticated %}
 
-                <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
-                    {{ comment_form | crispy }}
-                    {% csrf_token %}
-                    <button type="submit" class="btn heardit-btn btn-lg">Submit</button>
-                </form>
-                {% endif %}
+                        <h3>Leave a comment:</h3>
+                        <p>Posting as: {{ user.username }}</p>
+                        <form method="post" class="mt-3">
+                            {{ comment_form|crispy }}
+                            {% csrf_token %}
+                            <button type="submit" class="btn heardit-btn btn-lg">Submit</button>
+                        </form>
+                    {% endif %}
                 {% endif %}
             </div>
         </div>

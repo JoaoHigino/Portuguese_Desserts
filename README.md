@@ -173,15 +173,9 @@ A 500 server error page was created to handle internal server errors.
 * Space in the token provided. Caused CSS not to display on the front end as expected. [Click here](https://github.com/sherryrich/heard-it/blob/main/docs/error_8.png)
 * Missing closing span. Caused HTML to fail validator rules. [Click here](https://github.com/sherryrich/heard-it/blob/main/docs/error_9.png)
 * Search Button was missing on smaller devices so I added a media query and reduced the size of the element on smaller devices. Please see screen shots [Before](https://github.com/sherryrich/heard-it/blob/main/docs/search_box_before.PNG) and [After](https://github.com/sherryrich/heard-it/blob/main/docs/search_box_after.PNG). 
-* I was aware of various pylint and flak8 notifications however none of them are having any functionality implications and were as a result of the template followed from the code institute Django blog project Walkthrough.
 
 
 ## Tools & Technologies Used
-
-In this section, you should explain the various tools and technologies used to develop the project.
-Make sure to put a link (where applicable) to the source, and explain what each was used for.
-Some examples have been provided, but this is just a sample only, your project might've used others.
-Feel free to delete any unused items below as necessary.
 
 - [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
@@ -202,6 +196,7 @@ Feel free to delete any unused items below as necessary.
 - [Cloudinary](https://cloudinary.com) used for online static file storage.
 - [Summernote](https://summernote.org/) Used to add a text area field to the admin setup to enable a list of ingredients and method steps.
 - [Grammarly](https://app.grammarly.com/) - used to proof read the README.md
+- [FreeLogo](https://www.freelogodesign.org/) - used create the blog logo
 
 ## Database Design
 
@@ -432,19 +427,20 @@ Use this space to discuss any differences between the local version you've devel
 
 ## Credits
 
-In this section you need to reference where you got your content, media, and extra help from.
-It is common practice to use code from other repositories and tutorials,
-however, it is important to be very specific about these sources to avoid plagiarism.
+- [Pastel de Nata](https://leitesculinaria.com/7759/recipes-pasteis-de-nata.html)
+- [Bola de Berlim](https://www.sbs.com.au/food/recipes/portuguese-doughnuts-bola-de-berlim)
+- [Serradura](https://aromaticessence.co/serradura-portuguese-sawdust-pudding/)
+- [Arroz Doce](https://wetravelportugal.com/arroz-doce/)
+- [Pao de Lo](https://www.authenticfoodquest.com/pao-de-lo-recipe-portuguese-sponge-cake/)
+- [Queijadas](https://honestcooking.com/queijadas-portuguese-cheesecake-tarts/)
+- [Pudim de Ovos](https://macanesekitchen.com/2020/12/portuguese-egg-pudding-pudim-de-ovos/)
+- [Tarte Amendoa](https://leitesculinaria.com/7769/recipes-portuguese-almond-torte.html)
+- [Leite Creme](https://www.recipezazz.com/recipe/leite-de-creme-portuguese-egg-custard-24324)
+- [Farofias](https://www.foodfromportugal.com/recipes/farofias-portuguese-sweet/)
 
 ### Content
 
-Use this space to provide attribution links to any borrowed code snippets, elements, or resources.
-A few examples have been provided below to give you some ideas.
 
-Ideally, you should provide an actual link to every resource used, not just a generic link to the main site!
-
-| Source | Location | Notes |
-| --- | --- | --- |
 | [Tim Nelson](https://traveltimn.github.io/readme-builder) | README and TESTING | tool to help generate the Markdown files |
 | [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
 | [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |

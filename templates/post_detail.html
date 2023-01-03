@@ -13,11 +13,11 @@
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
-                {% if "placeholder" in post.featured_image.url %}
+                {% if "placeholder" in post.image.url %}
                 <img src="https://res.cloudinary.com/dwqowur4a/image/upload/v1672309257/desserts/bakery_epqssd.jpg"
                     width="100%" alt="cloudinary stock image">
                 {% else %}
-                <img src="{{ post.featured_image.url }}" style="width:100%"
+                <img src="{{ post.image.url }}" style="width:100%"
                     alt="cloudinary stock image">
                 {% endif %}
             </div>

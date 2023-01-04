@@ -55,42 +55,6 @@ In this section, list all of your user stories for the project.
 - As a Site administrator I can view the number of likes on each post so that I can see which is the most popular or viral.
 - As a Site administrator I can create, read, update and delete posts so that I can manage my blog content.
 
-## Wireframes
-
-In this section, display your wireframe screenshots using a Markdown `table`.
-
-Instructions on how to do Markdown `tables` start on line #213 on this site: https://pandao.github.io/editor.md/en.html
-
-To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
-I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
-
-### Mobile Wireframes
-
-| Size | Site Page | Screenshot |
-| --- | --- | --- |
-| Mobile | Home Page | ![screenshot](documentation/wireframes/mobile-home.png) |
-| Mobile | About Page | ![screenshot](documentation/wireframes/mobile-about.png) |
-| Mobile | Contact Page | ![screenshot](documentation/wireframes/mobile-contact.png) |
-| x | x | repeat for all remaining mobile wireframes |
-
-### Tablet Wireframes
-
-| Size | Site Page | Screenshot |
-| --- | --- | --- |
-| Tablet | Home Page | ![screenshot](documentation/wireframes/tablet-home.png) |
-| Tablet | About Page | ![screenshot](documentation/wireframes/tablet-about.png) |
-| Tablet | Contact Page | ![screenshot](documentation/wireframes/tablet-contact.png) |
-| x | x | repeat for all remaining tablet wireframes |
-
-### Desktop Wireframes
-
-| Size | Site Page | Screenshot |
-| --- | --- | --- |
-| Desktop | Home Page | ![screenshot](documentation/wireframes/desktop-home.png) |
-| Desktop | About Page | ![screenshot](documentation/wireframes/desktop-about.png) |
-| Desktop | Contact Page | ![screenshot](documentation/wireframes/desktop-contact.png) |
-| x | x | repeat for all remaining desktop wireframes |
-
 ## Features
 
 ### Existing Features
@@ -116,10 +80,9 @@ Social media network links are displayed in the footer.
 
 ![header](documentation/navbar.png)
 
-### Search Bar
+### Navigation Bar - Superuser
 
-![header](documentation/search.png)
-
+![header](documentation/navbarsuperuser.png)
 
 ### Create an account 
 
@@ -141,8 +104,8 @@ Social media network links are displayed in the footer.
 
 ![screenshot](documentation/aboutus.png)
 
-### Add Post - Admin Only
-![screenshot](documentation/addpost.png)
+### Add Post Django - Admin Only
+![screenshot](documentation/addpostdjango.png)
 
 ### Update/Delete Post - Admin Only
 ![screenshot](documentation/update.png)
@@ -163,17 +126,9 @@ A 500 server error page was created to handle internal server errors.
 ## Bugs / Errors encountered during development
 
 * Manage.py was not in the root directory. [Click here](documentation/error3.png)
-* App wasn’t deploying to heroku correctly. Updated Procfile from "heard-it" to "heardit"
-* Update your requirements.txt - pip3 freeze > requirements.txt and try again. I had a typo in requirements without .txt. [Click here](https://github.com/sherryrich/heard-it/blob/main/docs/error_2.png)
-* Template literal typo error "$" instead of "%". [Click here](https://github.com/sherryrich/heard-it/blob/main/docs/error_3.png)
-* Error in views.py. '-created' versus '-created_on'. [Click here](https://github.com/sherryrich/heard-it/blob/main/docs/error_4.png)
-* Missing comma at the end of this line "STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]". [Click here](https://github.com/sherryrich/heard-it/blob/main/docs/error_5.png)
-* 500 Error because I didn’t have "redirect" imported at top of views.py file. [Click here](https://github.com/sherryrich/heard-it/blob/main/docs/error_6.png)
-* Error in the terminal. Heroku updated database so had go to Heroku config vars and copy and paste the new database_url into the env.py to correct. [Click here](https://github.com/sherryrich/heard-it/blob/main/docs/error_7.png)
-* Space in the token provided. Caused CSS not to display on the front end as expected. [Click here](https://github.com/sherryrich/heard-it/blob/main/docs/error_8.png)
-* Missing closing span. Caused HTML to fail validator rules. [Click here](https://github.com/sherryrich/heard-it/blob/main/docs/error_9.png)
-* Search Button was missing on smaller devices so I added a media query and reduced the size of the element on smaller devices. Please see screen shots [Before](https://github.com/sherryrich/heard-it/blob/main/docs/search_box_before.PNG) and [After](https://github.com/sherryrich/heard-it/blob/main/docs/search_box_after.PNG). 
-
+* Admin wasnt unique on urls. [Click here](documentation/error2.png)
+* Error creating comments. [Click here](documentation/error.png)
+* Error creating new users. [Click here](documentation/error4.png)
 
 ## Tools & Technologies Used
 
@@ -427,16 +382,7 @@ Use this space to discuss any differences between the local version you've devel
 
 ## Credits
 
-- [Pastel de Nata](https://leitesculinaria.com/7759/recipes-pasteis-de-nata.html)
-- [Bola de Berlim](https://www.sbs.com.au/food/recipes/portuguese-doughnuts-bola-de-berlim)
-- [Serradura](https://aromaticessence.co/serradura-portuguese-sawdust-pudding/)
-- [Arroz Doce](https://wetravelportugal.com/arroz-doce/)
-- [Pao de Lo](https://www.authenticfoodquest.com/pao-de-lo-recipe-portuguese-sponge-cake/)
-- [Queijadas](https://honestcooking.com/queijadas-portuguese-cheesecake-tarts/)
-- [Pudim de Ovos](https://macanesekitchen.com/2020/12/portuguese-egg-pudding-pudim-de-ovos/)
-- [Tarte Amendoa](https://leitesculinaria.com/7769/recipes-portuguese-almond-torte.html)
-- [Leite Creme](https://www.recipezazz.com/recipe/leite-de-creme-portuguese-egg-custard-24324)
-- [Farofias](https://www.foodfromportugal.com/recipes/farofias-portuguese-sweet/)
+
 
 ### Content
 
@@ -456,27 +402,16 @@ Use this space to discuss any differences between the local version you've devel
 
 ### Media
 
-Use this space to provide attribution links to any images, videos, or audio files borrowed from online.
-A few examples have been provided below to give you some ideas.
-
-If you're the owner (or a close acquaintance) of all media files, then make sure to specify this.
-Let the assessors know that you have explicit rights to use the media files within your project.
-
-Ideally, you should provide an actual link to every media file used, not just a generic link to the main site!
-The list below is by no means exhaustive. Within the Code Institute Slack community, you can find more "free media" links
-by sending yourself the following command: `!freemedia`.
-
-| Source | Location | Type | Notes |
-| --- | --- | --- | --- |
-| [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
-| [Lorem Picsum](https://picsum.photos) | home page | image | hero image background |
-| [Unsplash](https://unsplash.com) | product page | image | sample of fake products |
-| [Pixabay](https://pixabay.com) | gallery page | image | group of photos for gallery |
-| [Wallhere](https://wallhere.com) | footer | image | background wallpaper image in the footer |
-| [This Person Does Not Exist](https://thispersondoesnotexist.com) | testimonials | image | headshots of fake testimonial images |
-| [Audio Micro](https://www.audiomicro.com/free-sound-effects) | game page | audio | free audio files to generate the game sounds |
-| [Videvo](https://www.videvo.net/) | home page | video | background video on the hero section |
-| [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
+- [Pastel de Nata](https://leitesculinaria.com/7759/recipes-pasteis-de-nata.html)
+- [Bola de Berlim](https://www.sbs.com.au/food/recipes/portuguese-doughnuts-bola-de-berlim)
+- [Serradura](https://aromaticessence.co/serradura-portuguese-sawdust-pudding/)
+- [Arroz Doce](https://wetravelportugal.com/arroz-doce/)
+- [Pao de Lo](https://www.authenticfoodquest.com/pao-de-lo-recipe-portuguese-sponge-cake/)
+- [Queijadas](https://honestcooking.com/queijadas-portuguese-cheesecake-tarts/)
+- [Pudim de Ovos](https://macanesekitchen.com/2020/12/portuguese-egg-pudding-pudim-de-ovos/)
+- [Tarte Amendoa](https://leitesculinaria.com/7769/recipes-portuguese-almond-torte.html)
+- [Leite Creme](https://www.recipezazz.com/recipe/leite-de-creme-portuguese-egg-custard-24324)
+- [Farofias](https://www.foodfromportugal.com/recipes/farofias-portuguese-sweet/)
 
 ### Acknowledgements
 

@@ -9,7 +9,7 @@ class PostAdmin(SummernoteModelAdmin):
     list_display = ('title', 'slug', 'status', 'created_on')
     search_fields = ('title', 'description', 'ingredients')
     prepopulated_fields = {'slug': ('title',)}
-    summernote_fields = ('description', 'ingredients', )
+    summernote_fields = ('description', 'ingredients', 'content')
 
 
 @admin.register(Comment)

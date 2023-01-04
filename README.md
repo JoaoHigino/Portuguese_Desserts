@@ -116,12 +116,12 @@ A 500 server error page was created to handle internal server errors.
 ![Error](documentation/error500.png)
 
 
-
 ### Future Features
 
 - Site Users be able to add recipes.
 - Allows users to signup to a newsletter / mailing list.
 - Contact Form.
+- Search Recipes.
 
 ## Bugs / Errors encountered during development
 
@@ -241,9 +241,49 @@ Using this approach, I was able to apply the MoSCow prioritization and labels to
 - **Could Have**: has small impact if left out (*20% of stories*)
 - **Won't Have**: not a priority for this iteration
 
-## Testing
+## Manual Testing
 
-For all testing, please refer to the [TESTING.md](TESTING.md) file.
+* Manual testing was completed for each case and edge case scanerio from user log in, user post article, user delete article and user log out.
+* The site was also manually tested on various browsers (Google Chrome, Safari, Microsoft Edge and Firefox) and on different screen sizes.
+* I also used lighthouse reports to see the performance, quality, and correctness of the website.
+
+
+### More manual testing structure and results
+|   | Pass/Fail |
+| ------------- | :----: |
+| Selecting Portuguese Desserts logo on homepage directs user back to homepage  |  Pass |
+| Selecting about link directs user to /about page  |  Pass |
+| Selecting Sign Up directs user to /accounts/signup/ page |  Pass |
+| Selecting Login directs user to /accounts/login/ page  |  Pass |
+| Click on the pagination link at the bottom of the page returns results of the next page (example /?page=2) |  Pass |
+| Registering as a user and entering password  to create a new user |  Pass |
+| Logging in as superuser / admin |  Pass |
+| "successfully signed in as (user name)" message shown to user |  Pass |
+| Logging in as superuser / admin to approve post |  Pass |
+| Navigating site as user / admin is permitted |  Pass |
+| Creating a new post directs user to "/new" and required fields send the data successfully to Django admin  |  Pass |
+| As admin I can view and publish post |  Pass |
+| If no image is selected then the default image is used |  Pass |
+| Posting a comment as a user / admin on any article |  Pass |
+| Liking a comment as a user / admin on any article |  Pass |
+| Updating a post as the author |  Pass |
+| User is prompted "are you sure you want to delete" before permitting deletion of a post |  Pass |
+| Deleting a post as the author |  Pass |
+| Confirmation message of deletion is shown |  Pass |
+| Not permitted to update a post if not the author |  Pass |
+| Not permitted to delete a post if not the author |  Pass |
+| "You have signed out" message shows to user when successfully signed out |  Pass |
+| Logging out as a user / admin directs user to homepage |  Pass |
+| Posting a new article requires appropriate fields to be filled in |  Pass |
+| Clicking on the social media icons in the footer open the link in a new tab |  Pass |
+
+
+### Responsiveness Browser Compatibility
+
+|  | Chrome | Firefox | Edge | Safari | Pass/Fail |
+| ------------- |-------------| -----|  ---------- |  -----| :----: |
+| Expected Appearance   | yes | yes  | yes  | yes | Pass |
+| Expected Layout   | yes | yes  | yes  | yes | Pass |
 
 ## Deployment
 
@@ -415,11 +455,8 @@ Use this space to discuss any differences between the local version you've devel
 
 ### Acknowledgements
 
-Use this space to provide attribution to any supports that helped, encouraged, or supported you throughout the development stages of this project.
-A few examples have been provided below to give you some ideas.
-
-- I would like to thank my Code Institute mentor, [John/Jane Doe](https://github.com/username) for their support throughout the development of this project.
-- I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
-- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
-- I would like to thank my spouse/partner (John/Jane), for believing in me, and allowing me to make this transition into software development.
-- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
+- To my amazing wife Sandra, my best friend, my mentor, and my safe haven, without her, all my dreams will be impossible to achieve. She is everything.
+- To my two kids, Maria and Thomas, with them life is easy and light. They make me laugh and think that our future is bright. 
+- To my family and friends - for being a great support and providing a lot of the user testing for me, especially my friends from "Liga 7 BP" with their craziness helped me to clean my head.
+- To my mentor Tim Nelson for all his guidance, support, tips, and feedback.
+- The Code Institute community on slack and my classmates its been a pleasure so far.

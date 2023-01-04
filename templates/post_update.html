@@ -3,6 +3,7 @@
 {% load crispy_forms_tags %}
 
 <div class="container">
+        {{ post.content | safe }}
     <h1 class="page-title">Update Post</h1>
     <hr class="home-break">
     <br>
@@ -27,13 +28,13 @@
     /* jshint esversion: 11 */
     let title = document.getElementById("id_title");
     let slug = document.getElementById("id_slug");
-    title?.addEventListener("keyup", convertToSlug);
-    slug?.addEventListener("keyup", convertToSlug);
+    title ? .addEventListener("keyup", convertToSlug);
+    slug ? .addEventListener("keyup", convertToSlug);
 
     function convertToSlug() {
-      slug.value = title.value.toLowerCase()
-                 .replace(/ /g, '-')
-                 .replace(/[^\w-]+/g, '');
+        slug.value = title.value.toLowerCase()
+            .replace(/ /g, '-')
+            .replace(/[^\w-]+/g, '');
     }
 </script>
 {% endblock %}

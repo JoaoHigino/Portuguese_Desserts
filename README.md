@@ -230,17 +230,13 @@ Through it, user stories, issues, and milestone tasks were planned, then tracked
 [GitHub Issues](https://github.com/JoaoHigino/Portuguese_Desserts/issues) served as an another Agile tool.
 There, I used my own **User Story Template** to manage user stories.
 
-It also helped with milestone iterations on a weekly basis.
-
-Consider adding a screenshot of your Open and Closed Issues.
-
 - [Open Issues](https://github.com/JoaoHigino/Portuguese_Desserts/issues)
 
-    ![screenshot](documentation/gh-issues-open.png)
+    ![screenshot](documentation/openissues.png)
 
 - [Closed Issues](https://github.com/JoaoHigino/Portuguese_Desserts/issues?q=is%3Aissue+is%3Aclosed)
 
-    ![screenshot](documentation/gh-issues-closed.png)
+    ![screenshot](documentation/closedissues.png)
 
 ### MoSCoW Prioritization
 

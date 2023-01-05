@@ -2,9 +2,7 @@
 
 Portuguese Desserts is a blog for the people who missed the best desserts in the world and missed Portugal. In this blog you can learn how to do your favorite desserts.
 
-<!-- INSERIR IMAGEM "Am I Responsive"-->
-
-![screenshot](documentation/png)
+![screenshot](documentation/responsive.png)
 
 The live link can be found here - [Portuguese Desserts](https://portuguese-desserts.herokuapp.com/)
 
@@ -13,7 +11,7 @@ The live link can be found here - [Portuguese Desserts](https://portuguese-desse
 A visitor to Portuguese Desserts would be someone who is most likely an adult who missed their traditional desserts and trying new recipes but also wants to save time and effort when deciding what to cook for a special occasion.
 
 
-### Colour Scheme
+## Colour Scheme
 
 Explain your colours and the colour scheme.
 
@@ -61,9 +59,11 @@ In this section, list all of your user stories for the project.
 
 ### Home Page
 
-Homepage displays the logo name, About Us, Sign Up and Login are the options on the left and search function on the right.
-The main body of the homepage contains 6 articles / posts and once more than 6 articles are posted pagination shows links to the next page.
-Social media network links are displayed in the footer.
+- Homepage displays the logo name, About Us, Sign Up and Login are the options on the left.
+- The main body of the homepage contains 6 articles / posts and once more than 6 articles are posted pagination shows links to the next page.
+- Social media network links are displayed in the footer.
+
+![screenshot](documentation/mainpage.png)
 
 ### Logo
 
@@ -78,45 +78,57 @@ Social media network links are displayed in the footer.
 - The My Account navigation link is a drop down menu which includes the Sign up and Log in links. 
 - When the user has logged in, the My Account drop down menu changes to display the user's name and a profile icon.
 
-![header](documentation/navbar.png)
+![navbar](documentation/navbar.png)
 
 ### Navigation Bar - Superuser
 
-![header](documentation/navbarsuperuser.png)
+- As a superuser you are able to add recipe.
+
+![navbarsuper](documentation/navbarsuperuser.png)
 
 ### Create an account 
 
-![header](documentation/signup.png)
+![signup](documentation/signup.png)
 
 ### Login 
 
-![header](documentation/signin.png)
+![signin](documentation/signin.png)
 
 ### Logout
 
-![header](documentation/signout.png)
+![signout](documentation/signout.png)
 
 ### Footer
 
-![screenshot](documentation/footer.png)
+![footer](documentation/footer.png)
 
 ### About Us
 
-![screenshot](documentation/aboutus.png)
+![aboutus](documentation/aboutus.png)
 
 ### Add Post Django - Admin Only
-![screenshot](documentation/addpostdjango.png)
+
+![django](documentation/addpostdjango.png)
 
 ### Update/Delete Post - Admin Only
-![screenshot](documentation/update.png)
+
+![update](documentation/update.png)
+
+![delete](documentation/deletepost.png)
+
+### Like/Comments
+
+![likes](documentation/likescomment.png)
+
 
 ### 500 Page Error
-A 500 server error page was created to handle internal server errors.
+
+- A 500 server error page was created to handle internal server errors.
 
 ![Error](documentation/error500.png)
 
 
-### Future Features
+## Future Features
 
 - Site Users be able to add recipes.
 - Allows users to signup to a newsletter / mailing list.
@@ -134,8 +146,6 @@ A 500 server error page was created to handle internal server errors.
 
 - [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
-- [CSS :root variables](https://www.w3schools.com/css/css3_variables.asp) used for reusable styles throughout the site.
-- [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) and/or [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
 - [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
 - [JavaScript](https://www.javascript.com) used for user interaction on the site.
 - [Python](https://www.python.org) used as the back-end programming language.
@@ -150,6 +160,7 @@ A 500 server error page was created to handle internal server errors.
 - [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
 - [Cloudinary](https://cloudinary.com) used for online static file storage.
 - [Summernote](https://summernote.org/) Used to add a text area field to the admin setup to enable a list of ingredients and method steps.
+- [amiresponsive](https://ui.dev/amiresponsive) to see how responsive the site is on different devices.
 - [Grammarly](https://app.grammarly.com/) - used to proof read the README.md
 - [FreeLogo](https://www.freelogodesign.org/) - used create the blog logo
 
@@ -203,6 +214,7 @@ Github projects was used to manage the development process using an agile approa
 
 The INSERIR Epics listed above were documented within the Github project as Milestones. A Github Issue was created for each User Story which was then allocated to a milestone(Epic). Each User Story has defined acceptance criteria to make it clear when the User Story has been completed. The acceptance criteria are further broken down into tasks to facilitate the User Story's execution.
 
+
 ### GitHub Projects
 
 [GitHub Projects](https://github.com/JoaoHigino/Portuguese_Desserts/projects) served as an Agile tool for this project.
@@ -210,9 +222,8 @@ It isn't a specialized tool, but with the right tags and project creation/issue 
 
 Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
 
-Consider adding a basic screenshot of your Projects Board.
+![agile](documentation/agile.png)
 
-![screenshot](documentation/gh-projects.png)
 
 ### GitHub Issues
 
@@ -284,6 +295,27 @@ Using this approach, I was able to apply the MoSCow prioritization and labels to
 | ------------- |-------------| -----|  ---------- |  -----| :----: |
 | Expected Appearance   | yes | yes  | yes  | yes | Pass |
 | Expected Layout   | yes | yes  | yes  | yes | Pass |
+
+### Lighthouse
+
+![screenshot](documentation/lighthouse.png)
+
+### The W3C Markup Validator
+
+![screenshot](documentation/html.png)
+
+### W3C CSS Validator
+
+![screenshot](documentation/w3c.png)
+
+### PEP8 online
+
+![screenshot](documentation/pep8.png)
+
+### JSHint
+
+![screenshot](documentation/jshint.png)
+
 
 ## Deployment
 

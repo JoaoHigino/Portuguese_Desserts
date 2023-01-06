@@ -185,6 +185,15 @@ a.nav-link-active {
     color: #880404;
 }
 
+.denyrecipe, 
+.denyeditcomment,
+.denydeletecomment{
+    text-align: center;
+    color: #880404;
+    font-size: 2rem;
+    padding-top: 30px;
+}
+
 @media (max-width: 700px) {
     textarea {
         width: 75%;

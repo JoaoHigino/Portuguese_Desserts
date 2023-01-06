@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
+{% load cloudinary %}
+{% if request.user.username == comment.user.username %}
+
 <div class="container">
     <h1 class="page-title">Delete Comment</h1>
     <hr class="home-break">
@@ -20,5 +23,10 @@
         </div>
     </div>
 </div>
+
+{% elif user.is_authenticated %}
+<p class="denydeletecomment">You can't delete this comment.</p>
+
+{% endif %}
 
 {% endblock %}

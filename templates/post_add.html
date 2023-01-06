@@ -2,7 +2,7 @@
 {% block content %}
 
 {% load crispy_forms_tags %}
-
+{% if user.is_authenticated %}
 <div class="container">
     <h1 class="page-title">Add Recipe</h1>
     <hr class="home-break">
@@ -19,7 +19,10 @@
         </div>
     </div>
 </div>
+{% else %} 
+<p class="denyrecipe">You don't have permition to add recipe.</p>
 
+{% endif %}
 {%endblock%}
 {% block js %}
 <script>

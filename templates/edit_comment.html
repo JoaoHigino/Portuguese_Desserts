@@ -8,8 +8,9 @@
 <div class="container">
     <div class="row">
         <div class="col-8 offset-2">
-            <h1 class="display-2 text-center mt-2">Edit Comment</h1>
-            <hr>
+            <h1 class="page-title">Edit Comment</h1>
+            <hr class="home-break">
+            <br>
         </div>
     </div>
 </div>
@@ -25,7 +26,7 @@
 </div>
 
 {% elif user.is_authenticated %}
-This is not your comment.
+<p class="denyeditcomment">This is not your comment.</p>
 
 {% endif %}
 

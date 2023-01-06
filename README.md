@@ -131,7 +131,7 @@ The Robot Mono font is the main font used for the body of the website with the P
 
 ### 404 Page Error
 
-colocar imagem
+![Error](documentation/error404.png)
 
 ## Future Features
 
@@ -212,27 +212,12 @@ class Comment(models.Model):
 
 ![screenshot](documentation/diagramps.png)
 
-Using Markdown formatting to represent an example ERD table using the Product model above:
-
-- Table: **Product**
-
-    | **PK** | **id** (unique) | Type | Notes |
-    | --- | --- | --- | --- |
-    | **FK** | category | ForeignKey | FK to **Category** model |
-    | | sku | CharField | |
-    | | name | CharField | |
-    | | description | TextField | |
-    | | has_sizes | BooleanField | |
-    | | price | DecimalField | |
-    | | rating | DecimalField | |
-    | | image_url | URLField | |
-    | | image | ImageField | |
 
 ## Agile Development Process
 
 Github projects was used to manage the development process using an agile approach. Please see link to project board [here](https://github.com/users/JoaoHigino/projects/7)
 
-The INSERIR Epics listed above were documented within the Github project as Milestones. A Github Issue was created for each User Story which was then allocated to a milestone(Epic). Each User Story has defined acceptance criteria to make it clear when the User Story has been completed. The acceptance criteria are further broken down into tasks to facilitate the User Story's execution.
+The Epics listed above were documented within the Github project as Milestones. A Github Issue was created for each User Story which was then allocated to a milestone(Epic). Each User Story has defined acceptance criteria to make it clear when the User Story has been completed. The acceptance criteria are further broken down into tasks to facilitate the User Story's execution.
 
 
 ### GitHub Projects
@@ -274,6 +259,20 @@ Using this approach, I was able to apply the MoSCow prioritization and labels to
 * The site was also manually tested on various browsers (Google Chrome, Safari, Microsoft Edge, and Firefox) and different screen sizes.
 * I also used lighthouse reports to see the performance, quality, and correctness of the website.
 
+### Defensive Design
+
+- If you are not logged as superuser you can't add recipes
+
+![screenshot](documentation/denyaddrecipe.png)
+
+- You can't delete a comment that isn't yours.
+
+![screenshot](documentation/denydeletecomment.png)
+
+- You can't edit a comment that isn't yours.
+
+![screenshot](documentation/denyeditcomment.png)
+
 
 ### More manual testing structure and results
 |   | Pass/Fail |
@@ -314,7 +313,26 @@ Selecting the Portuguese Desserts logo on the homepage directs the user back to 
 
 ### Lighthouse
 
+- No errors were found when passing through Lighthouse
+
 ![screenshot](documentation/lighthouse.png)
+
+![screenshot](documentation/lighthouseaboutus.png)
+
+![screenshot](documentation/lighthouseaddrecipe.png)
+
+![screenshot](documentation/lighthousebolo.png)
+
+![screenshot](documentation/lighthousepage2.png)
+
+![screenshot](documentation/lighthouseregister.png)
+
+![screenshot](documentation/lighthousesignin.png)
+
+![screenshot](documentation/lighthousesignout.png)
+
+![screenshot](documentation/likescomment.png)
+
 
 ### The W3C Markup Validator
 
@@ -482,15 +500,7 @@ Use this space to discuss any differences between the local version you've devel
 
 - [Tim Nelson](https://traveltimn.github.io/readme-builder) | README and TESTING | tool to help generate the Markdown files |
 - [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
-- [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
-- [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | entire site | how to use CSS :root variables |
-- [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
-- [Grid Garden](https://cssgridgarden.com) | entire site | modern responsive layouts |
-- [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
-- [YouTube](https://www.youtube.com/watch?v=YL1F4dCUlLc) | leaderboard | using `localStorage()` in JS for high scores |
-- [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | PP3 terminal | tutorial for adding color to the Python terminal |
-- [strftime](https://strftime.org) | CRUD functionality | helpful tool to format date/time from string |
-- [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
+|
 
 ### Media
 

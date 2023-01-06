@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.urls import reverse_lazy
 from django.views import generic, View
-from .models import Post
+from .models import Post, Comment
 from .forms import CommentForm, PostForm
 from django.forms import Form
 from django.http import HttpResponseRedirect
@@ -149,3 +149,41 @@ class DeletePost(generic.DeleteView):
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, self.success_message)
         return super(DeletePost, self).delete(request, *args, **kwargs)
+
+
+class UpdateComment(generic.UpdateView):
+    model = Comment
+    form_class = CommentForm
+    template_name = 'edit_comment.html'
+    success_message = "Comment edited successfully"
+
+    def form_valid(self, form):
+        form.instance.name = self.request.user.username
+        return super().form_valid(form)
+
+    def test_func(self):
+        comment = self.get_object()
+        return comment.name == self.request.user.username
+
+    def get_success_url(self):
+        messages.success(self.request, self.success_message)
+        recipe = self.object.recipe
+        return reverse_lazy('post_detail', kwargs={'slug': recipe.slug})
+
+
+class DeleteComment(generic.DeleteView):
+    model = Comment
+    template_name = 'delete_comment.html'
+    success_message = "Comment deleted successfully"
+
+    def test_func(self):
+        comment = self.get_object()
+        return comment.name == self.request.user.username
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super(DeleteComment, self).delete(request, *args, **kwargs)
+
+    def get_success_url(self):
+        recipe = self.object.recipe
+        return reverse_lazy('post_detail', kwargs={'slug': recipe.slug})

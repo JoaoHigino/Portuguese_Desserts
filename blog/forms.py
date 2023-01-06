@@ -1,4 +1,5 @@
 from django import forms
+from django_summernote.widgets import SummernoteWidget
 from .models import Comment, Post
 
 
@@ -14,3 +15,7 @@ class PostForm(forms.ModelForm):
         fields = (
             "title", "slug", "preparation_time", "cook_time",
             "description", "ingredients", "image", "status")
+        widgets = {
+            'description': SummernoteWidget(),
+            'ingredients': SummernoteWidget(),
+        }

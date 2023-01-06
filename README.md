@@ -10,7 +10,6 @@ The live link can be found here - [Portuguese Desserts](https://portuguese-desse
 
 A visitor to Portuguese Desserts would be someone who is most likely an adult who missed their traditional desserts and trying new recipes but also wants to save time and effort when deciding what to cook for a special occasion.
 
-
 ## Colour Scheme
 
 Explain your colours and the colour scheme.
@@ -24,11 +23,9 @@ I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0
 
 ![screenshot](documentation/colorpalette.png)
 
-
 ### Typography
 
 The Robot Mono font is the main font used for the body of the website with the Playfair Display font used for the main headings on the home page. These fonts were imported via Google Fonts.
-
 
 ## User Stories
 
@@ -119,7 +116,6 @@ The Robot Mono font is the main font used for the body of the website with the P
 ![updatepost](documentation/updatepost.png)
 
 ![delete](documentation/deletepost.png)
-
 
 ### Like/Comments
 
@@ -218,13 +214,11 @@ class Comment(models.Model):
 
 ![screenshot](documentation/diagramps.png)
 
-
 ## Agile Development Process
 
 Github projects was used to manage the development process using an agile approach. Please see link to project board [here](https://github.com/users/JoaoHigino/projects/7)
 
 The Epics listed above were documented within the Github project as Milestones. A Github Issue was created for each User Story which was then allocated to a milestone(Epic). Each User Story has defined acceptance criteria to make it clear when the User Story has been completed. The acceptance criteria are further broken down into tasks to facilitate the User Story's execution.
-
 
 ### GitHub Projects
 
@@ -234,7 +228,6 @@ It isn't a specialized tool, but with the right tags and project creation/issue 
 Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
 
 ![agile](documentation/agile.png)
-
 
 ### GitHub Issues
 
@@ -279,7 +272,6 @@ Using this approach, I was able to apply the MoSCow prioritization and labels to
 
 ![screenshot](documentation/denyeditcomment.png)
 
-
 ### More manual testing structure and results
 |   | Pass/Fail |
 | ------------- | :----: |
@@ -309,7 +301,6 @@ Selecting the Portuguese Desserts logo on the homepage directs the user back to 
 | Posting a new article requires appropriate fields to be filled in |  Pass |
 | Clicking on the social media icons in the footer opens the link in a new tab |  Pass |
 
-
 ### Responsiveness Browser Compatibility
 
 |  | Chrome | Opera | Edge | Safari | Pass/Fail |
@@ -332,7 +323,6 @@ Selecting the Portuguese Desserts logo on the homepage directs the user back to 
 - Safari
 
 ![screenshot](documentation/safari.png)
-
 
 ### Lighthouse
 
@@ -390,7 +380,6 @@ Selecting the Portuguese Desserts logo on the homepage directs the user back to 
 
 ![screenshot](documentation/html_updatecomment.png)
 
-
 ### W3C CSS Validator
 
 - No errors found.
@@ -419,7 +408,6 @@ Selecting the Portuguese Desserts logo on the homepage directs the user back to 
 
 ![screenshot](documentation/pep8_my_urls.png)
 
-
 ### JSHint
 
 - No errors found.
@@ -427,8 +415,6 @@ Selecting the Portuguese Desserts logo on the homepage directs the user back to 
 ![screenshot](documentation/jshint.png)
 
 ![screenshot](documentation/jshint2.png)
-
-
 
 ## Deployment
 
@@ -561,10 +547,6 @@ You can fork this repository by using the following steps:
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
-### Local VS Deployment
-
-Use this space to discuss any differences between the local version you've developed, and the live deployment site on Heroku.
-
 ## Credits
 
 - [StackOverflow](https://stackoverflow.com/questions/72446262/git-pull-not-possible-to-fast-forward/72460052#72460052)
@@ -572,15 +554,11 @@ Use this space to discuss any differences between the local version you've devel
 - [StackOverflow](https://stackoverflow.com/questions/73964287/django-summernote-dont-form-is-not-displayed-outside-the-admin-panel)
 - [Django Summernote](https://github.com/summernote/django-summernote)
 
-
-
 ### Content
-
 
 - [Tim Nelson](https://traveltimn.github.io/readme-builder) | README and TESTING | tool to help generate the Markdown files |
 - [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
 |
-
 ### Media
 
 - [Pastel de Nata](https://leitesculinaria.com/7759/recipes-pasteis-de-nata.html)

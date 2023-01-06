@@ -454,6 +454,9 @@ Use this space to discuss any differences between the local version you've devel
 
 - [StackOverflow](https://stackoverflow.com/questions/72446262/git-pull-not-possible-to-fast-forward/72460052#72460052)
 - [StackOverflow](https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown)
+- [StackOverflow](https://stackoverflow.com/questions/73964287/django-summernote-dont-form-is-not-displayed-outside-the-admin-panel)
+- [Django Summernote](https://github.com/summernote/django-summernote)
+
 
 
 ### Content

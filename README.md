@@ -354,8 +354,13 @@ Selecting the Portuguese Desserts logo on the homepage directs the user back to 
 
 ![screenshot](documentation/lighthousesignout.png)
 
-![screenshot](documentation/likescomment.png)
+![screenshot](documentation/lighthouseedit.png)
 
+![screenshot](documentation/lighthouseupdate.png)
+
+![screenshot](documentation/lighthousedeletepost.png)
+
+![screenshot](documentation/lighthousedelete.png)
 
 ### The W3C Markup Validator
 

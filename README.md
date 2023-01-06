@@ -116,12 +116,18 @@ The Robot Mono font is the main font used for the body of the website with the P
 
 ![update](documentation/update.png)
 
+![updatepost](documentation/updatepost.png)
+
 ![delete](documentation/deletepost.png)
+
 
 ### Like/Comments
 
 ![likes](documentation/likescomment.png)
 
+### New Comment
+
+![likes](documentation/comment.png)
 
 ### 500 Page Error
 
@@ -325,7 +331,7 @@ Selecting the Portuguese Desserts logo on the homepage directs the user back to 
 
 - Safari
 
-![screenshot](documentation)
+![screenshot](documentation/safari.png)
 
 
 ### Lighthouse
@@ -361,8 +367,28 @@ Selecting the Portuguese Desserts logo on the homepage directs the user back to 
  
  ![screenshot](documentation/summernoteerror.png)
 
+![screenshot](documentation/html_page2.png)
+
+![screenshot](documentation/html_signup.png)
+
+![screenshot](documentation/html_login.png)
+
+![screenshot](documentation/html_signout.png)
+
+![screenshot](documentation/htmlaboutus.png)
+
+![screenshot](documentation/html_add_recipe.png)
+
+![screenshot](documentation/html_deletecomment.png)
+
+![screenshot](documentation/html_deletepost.png)
+
+![screenshot](documentation/html_updatecomment.png)
+
 
 ### W3C CSS Validator
+
+- No errors found.
 
 ![screenshot](documentation/w3c.png)
 
@@ -391,7 +417,12 @@ Selecting the Portuguese Desserts logo on the homepage directs the user back to 
 
 ### JSHint
 
+- No errors found.
+
 ![screenshot](documentation/jshint.png)
+
+![screenshot](documentation/jshint2.png)
+
 
 
 ## Deployment

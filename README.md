@@ -1,6 +1,6 @@
 # PORTUGUESE DESSERTS
 
-Portuguese Desserts is a blog for the people who missed the best desserts in the world and missed Portugal. In this blog you can learn how to do your favorite desserts.
+Portuguese Desserts is a blog for the people who missed the best desserts in the world and missed Portugal. In this blog, you can learn how to do your favorite desserts.
 
 ![screenshot](documentation/responsive.png)
 
@@ -32,26 +32,24 @@ The Robot Mono font is the main font used for the body of the website with the P
 
 ## User Stories
 
-In this section, list all of your user stories for the project.
-
 ### New Site Users
 
 - As a New Site User I can log into my own account so that I can manage Username and Password information.
 
 ### Returning Site Users
 
-- As a Site User I can view a paginated list of posts so that easily select a post to view.
-- As a Site User I can edit my comments so that I can change my opinion.
-- As a Site User I can delete my comments so that no one can read my comments again.
-- As a Site User I can view a paginated list of recipes so that I can select a recipe to view.
-- As a Site User I can view comments on an individual post so that I can read the conversation.
-- As a site user I can search for a recipe so that I can minimize time searching for what I need.
+- As a Site User, I can view a paginated list of posts so that easily select a post to view.
+- As a Site User, I can edit my comments so that I can change my opinion.
+- As a Site User, I can delete my comments so that no one can read my comments again.
+- As a Site User, I can view a paginated list of recipes so that I can select a recipe to view.
+- As a Site User, I can view comments on an individual post so that I can read the conversation.
+- As a Site User, I can search for a recipe so that I can minimize time searching for what I need.
 
 ### Site Admin
 
-- As a Site administrator I can add, filter, change and search for recipes so that I can easily manage my site content.
-- As a Site administrator I can view the number of likes on each post so that I can see which is the most popular or viral.
-- As a Site administrator I can create, read, update and delete posts so that I can manage my blog content.
+- As a Site administrator, I can add, filter, change and search for recipes so that I can easily manage my site content.
+- As a Site administrator, I can view the number of likes on each post so that I can see which is the most viral.
+- As a Site administrator, I can create, read, update and delete posts so that I can manage my blog content.
 
 ## Features
 
@@ -59,15 +57,15 @@ In this section, list all of your user stories for the project.
 
 ### Home Page
 
-- Homepage displays the logo name, About Us, Sign Up and Login are the options on the left.
-- The main body of the homepage contains 6 articles / posts and once more than 6 articles are posted pagination shows links to the next page.
+- The homepage displays the logo name, About Us, Sign Up and Login are the options on the left. If you are logged as a superuser Add Recipe will appear too.
+- The main body of the homepage contains 6 articles/posts and once more than 6 articles are posted pagination shows links to the next page.
 - Social media network links are displayed in the footer.
 
 ![screenshot](documentation/mainpage.png)
 
 ### Logo
 
-- A customised logo was created using freelogodesign which is a free logo generator.
+- A customized logo was created using free logo design which is a free logo generator.
 - This logo is positioned in the top left of the navigation bar. The logo is linked to the home page for ease of navigation for the user.
 
 ![screenshot](documentation/logo_pd.png)
@@ -75,8 +73,8 @@ In this section, list all of your user stories for the project.
 ### Navigation Bar
 
 - The navigation bar is present at the top of every page and includes all links to the various other pages.
-- The My Account navigation link is a drop down menu which includes the Sign up and Log in links. 
-- When the user has logged in, the My Account drop down menu changes to display the user's name and a profile icon.
+- The My Account navigation link is a drop-down menu that includes the Sign-up and Log-in links. 
+- When the user has logged in, the My Account drop-down menu changes to display the user's name and a profile icon.
 
 ![navbar](documentation/navbar.png)
 
@@ -254,39 +252,39 @@ Using this approach, I was able to apply the MoSCow prioritization and labels to
 
 ## Manual Testing
 
-* Manual testing was completed for each case and edge case scanerio from user log in, user post article, user delete article and user log out.
-* The site was also manually tested on various browsers (Google Chrome, Safari, Microsoft Edge and Firefox) and on different screen sizes.
+* Manual testing was completed for each case and edge case scenario from user log in, user post article, user deleting the article, and user log out.
+* The site was also manually tested on various browsers (Google Chrome, Safari, Microsoft Edge, and Firefox) and different screen sizes.
 * I also used lighthouse reports to see the performance, quality, and correctness of the website.
 
 
 ### More manual testing structure and results
 |   | Pass/Fail |
 | ------------- | :----: |
-| Selecting Portuguese Desserts logo on homepage directs user back to homepage  |  Pass |
-| Selecting about link directs user to /about page  |  Pass |
-| Selecting Sign Up directs user to /accounts/signup/ page |  Pass |
-| Selecting Login directs user to /accounts/login/ page  |  Pass |
+Selecting the Portuguese Desserts logo on the homepage directs the user back to the homepage  |  Pass |
+| Selecting the about link directs the user to /about page  |  Pass |
+| Selecting Sign Up directs the user to /accounts/signup/ page |  Pass |
+| Selecting Login directs the user to /accounts/login/ page  |  Pass |
 | Click on the pagination link at the bottom of the page returns results of the next page (example /?page=2) |  Pass |
-| Registering as a user and entering password  to create a new user |  Pass |
-| Logging in as superuser / admin |  Pass |
+| Registering as a user and entering a password to create a new user |  Pass |
+| Logging in as superuser/admin |  Pass |
 | "successfully signed in as (user name)" message shown to user |  Pass |
-| Logging in as superuser / admin to approve post |  Pass |
-| Navigating site as user / admin is permitted |  Pass |
-| Creating a new post directs user to "/new" and required fields send the data successfully to Django admin  |  Pass |
-| As admin I can view and publish post |  Pass |
+| Logging in as superuser/admin to approve post |  Pass |
+| Navigating site as user/admin is permitted |  Pass |
+| Creating a new post directs the user to "/new" and required fields send the data successfully to Django admin  |  Pass |
+| As admin I can view and publish posts |  Pass |
 | If no image is selected then the default image is used |  Pass |
-| Posting a comment as a user / admin on any article |  Pass |
-| Liking a comment as a user / admin on any article |  Pass |
+| Posting comments as a user/admin on any article |  Pass |
+| Liking a comment as a user/admin on any article |  Pass |
 | Updating a post as the author |  Pass |
 | User is prompted "are you sure you want to delete" before permitting deletion of a post |  Pass |
 | Deleting a post as the author |  Pass |
 | Confirmation message of deletion is shown |  Pass |
 | Not permitted to update a post if not the author |  Pass |
 | Not permitted to delete a post if not the author |  Pass |
-| "You have signed out" message shows to user when successfully signed out |  Pass |
-| Logging out as a user / admin directs user to homepage |  Pass |
+| "You have signed out" message shows to the user when successfully signed out |  Pass |
+| Logging out as a user/admin directs user to the homepage |  Pass |
 | Posting a new article requires appropriate fields to be filled in |  Pass |
-| Clicking on the social media icons in the footer open the link in a new tab |  Pass |
+| Clicking on the social media icons in the footer opens the link in a new tab |  Pass |
 
 
 ### Responsiveness Browser Compatibility
@@ -454,23 +452,24 @@ Use this space to discuss any differences between the local version you've devel
 
 ## Credits
 
+- [StackOverflow](https://stackoverflow.com/questions/72446262/git-pull-not-possible-to-fast-forward/72460052#72460052)
+- [StackOverflow](https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown)
 
 
 ### Content
 
 
-| [Tim Nelson](https://traveltimn.github.io/readme-builder) | README and TESTING | tool to help generate the Markdown files |
-| [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
-| [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
-| [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | contact page | interactive pop-up (modal) |
-| [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | entire site | how to use CSS :root variables |
-| [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
-| [Grid Garden](https://cssgridgarden.com) | entire site | modern responsive layouts |
-| [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
-| [YouTube](https://www.youtube.com/watch?v=YL1F4dCUlLc) | leaderboard | using `localStorage()` in JS for high scores |
-| [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | PP3 terminal | tutorial for adding color to the Python terminal |
-| [strftime](https://strftime.org) | CRUD functionality | helpful tool to format date/time from string |
-| [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
+- [Tim Nelson](https://traveltimn.github.io/readme-builder) | README and TESTING | tool to help generate the Markdown files |
+- [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
+- [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
+- [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | entire site | how to use CSS :root variables |
+- [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
+- [Grid Garden](https://cssgridgarden.com) | entire site | modern responsive layouts |
+- [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
+- [YouTube](https://www.youtube.com/watch?v=YL1F4dCUlLc) | leaderboard | using `localStorage()` in JS for high scores |
+- [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | PP3 terminal | tutorial for adding color to the Python terminal |
+- [strftime](https://strftime.org) | CRUD functionality | helpful tool to format date/time from string |
+- [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
 
 ### Media
 

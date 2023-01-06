@@ -129,6 +129,9 @@ The Robot Mono font is the main font used for the body of the website with the P
 
 ![Error](documentation/error500.png)
 
+### 404 Page Error
+
+colocar imagem
 
 ## Future Features
 
@@ -153,7 +156,6 @@ The Robot Mono font is the main font used for the body of the website with the P
 - [Python](https://www.python.org) used as the back-end programming language.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [GitHub](https://github.com) used for secure online code storage.
-- [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
 - [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
 - [Tim Nelson](https://traveltimn.github.io/readme-builder) used to help generate the Markdown files.
 - [Django](https://www.djangoproject.com) used as the Python framework for the site.
@@ -176,22 +178,38 @@ Understanding the relationships between different tables can save time later in 
 Using your defined models (one example below), create an ERD with the relationships identified.
 
 ```python
-class Product(models.Model):
-    category = models.ForeignKey(
-        "Category", null=True, blank=True, on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=254, null=True, blank=True)
-    name = models.CharField(max_length=254)
-    description = models.TextField()
-    has_sizes = models.BooleanField(default=False, null=True, blank=True)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(
-        max_digits=6, decimal_places=2, null=True, blank=True)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
-
-    def __str__(self):
-        return self.name
+class Post(models.Model):
+    title = models.CharField(
+        max_length=50, unique=True, null=False, blank=False)
+    slug = models.SlugField(
+        max_length=200, unique=True, null=False, blank=False)
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="blog_posts"
+    )
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+    preparation_time = models.IntegerField(null=False, blank=False)
+    cook_time = models.IntegerField(null=False, blank=False)
+    description = models.TextField(null=False, blank=False)
+    ingredients = models.TextField(null=False, blank=False)
+    image = CloudinaryField('image', default='placeholder')
+    status = models.IntegerField(choices=STATUS, default=1)
+    bookmarks = models.ManyToManyField(
+        User, related_name='bookmark', default=None, blank=True)
+    likes = models.ManyToManyField(
+        User, related_name='blogpost_like', blank=True)
 ```
+
+```python
+class Comment(models.Model):
+    recipe = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name='comments')
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE)
+    body = models.TextField(null=False, blank=False)
+    created_on = models.DateTimeField(auto_now_add=True)
+```
+
 ![screenshot](documentation/diagramps.png)
 
 Using Markdown formatting to represent an example ERD table using the Product model above:

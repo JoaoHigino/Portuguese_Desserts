@@ -30,4 +30,3 @@ urlpatterns = [
         views.DeleteComment.as_view(), name='delete_comment'
         ),
 ]
-

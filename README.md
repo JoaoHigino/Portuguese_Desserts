@@ -306,10 +306,27 @@ Selecting the Portuguese Desserts logo on the homepage directs the user back to 
 
 ### Responsiveness Browser Compatibility
 
-|  | Chrome | Firefox | Edge | Safari | Pass/Fail |
+|  | Chrome | Opera | Edge | Safari | Pass/Fail |
 | ------------- |-------------| -----|  ---------- |  -----| :----: |
 | Expected Appearance   | yes | yes  | yes  | yes | Pass |
 | Expected Layout   | yes | yes  | yes  | yes | Pass |
+
+- Chrome
+
+![screenshot](documentation/chrome.png)
+
+- Opera
+
+![screenshot](documentation/opera.png)
+
+- Edge
+
+![screenshot](documentation/edge.png)
+
+- Safari
+
+![screenshot](documentation)
+
 
 ### Lighthouse
 
@@ -338,13 +355,39 @@ Selecting the Portuguese Desserts logo on the homepage directs the user back to 
 
 ![screenshot](documentation/html.png)
 
+![screenshot](documentation/summernoterror2.png)
+
+ - Error from summernote widget(https://github.com/summernote/django-summernote), the only code to makes Add Recipe have summernote and dont look like this:
+ 
+ ![screenshot](documentation/summernoteerror.png)
+
+
 ### W3C CSS Validator
 
 ![screenshot](documentation/w3c.png)
 
 ### PEP8 online
 
+- No errors found.
+
 ![screenshot](documentation/pep8.png)
+
+![screenshot](documentation/pep8_blog_admin.png)
+
+![screenshot](documentation/pep8_blog_forms.png)
+
+![screenshot](documentation/pep8_blog_models.png)
+
+![screenshot](documentation/pep8_blog_urls.png)
+
+![screenshot](documentation/pep8_blog_views.png)
+
+![screenshot](documentation/pep8_my_manage.png)
+
+![screenshot](documentation/pep8_my_settings.png)
+
+![screenshot](documentation/pep8_my_urls.png)
+
 
 ### JSHint
 

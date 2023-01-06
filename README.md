@@ -106,9 +106,13 @@ In this section, list all of your user stories for the project.
 
 ![aboutus](documentation/aboutus.png)
 
-### Add Post Django - Admin Only
+### Add Recipe Django - Admin Only
 
 ![django](documentation/addpostdjango.png)
+
+### Add Recipe Blog - Admin Only
+
+![addrecipe](documentation/addrecipe.png)
 
 ### Update/Delete Post - Admin Only
 
